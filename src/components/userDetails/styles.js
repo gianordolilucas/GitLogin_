@@ -37,15 +37,15 @@ export const UserName = styled.h2`
 `
 
 export const Description = styled.p`
-    width: 90%;
-    text-align: left;
-    margin-left: 40px;
-    margin-top: 5px;
+    width: 90%;    
+    text-align: justify;
+    margin: 5px 0px;
     font-size: 12px;
     color: #888;
     overflow: hidden;
+    max-height: 42px;
 
-    @media (max-width: 250px){
+    @media (max-width: 430px){
         width(300px)
     }
 `

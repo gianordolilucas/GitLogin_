@@ -15,7 +15,7 @@ const ReposContainer = props => {
                 {(props?.repos).map( repo => (
                     <Repo key={repo?.id}>
                         <RepoName>{repo?.name}</RepoName>
-                        <RepoDescription>{repo?.descripition}</RepoDescription>
+                        <RepoDescription>{repo?.description}</RepoDescription>
                     </Repo>
                 ))}
             </ListOfReposContainer>

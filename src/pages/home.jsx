@@ -9,14 +9,14 @@ import UserNumbers from '../components/userNumbers';
 import HeaderContainer from '../components/hearderContainer';
 import Footer from '../components/footerContainer'
 
-import {context }from '../context'
+import { context }from '../context'
 
 export default function Home() {
     const ctx = useContext(context);
     return (
         <Container>
-            {
-            ctx.userData?.name ? 
+            <Header />
+            {ctx.userData?.login ? 
             <React.Fragment>
                 <UserContainer>
                     <HeaderContainer userFollow={false} ></HeaderContainer>
@@ -27,9 +27,7 @@ export default function Home() {
                 </UserContainer>
                 <Footer/>
             </React.Fragment>
-            : <Header />
-            }
-            
+            :undefined}            
         </Container>
     );
 }

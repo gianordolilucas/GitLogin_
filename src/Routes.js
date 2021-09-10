@@ -10,6 +10,7 @@ import Repos from './pages/repos'
 import Followers from './pages/followers'
 import Following from './pages/following'
 import FollowDetails from './pages/followDetails'
+import Starred from './pages/starred'
 
 const Routes = () => (
     <BRouter>
@@ -19,6 +20,7 @@ const Routes = () => (
             <Route path="/followers" component={ Followers } />
             <Route path="/following" component={ Following } />
             <Route path="/FollowDetails" component={ FollowDetails } />
+            <Route path="/starred" component={ Starred } />
             
 
         </Switch>

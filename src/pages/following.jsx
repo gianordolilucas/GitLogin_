@@ -13,7 +13,7 @@ const Following = props => {
 
     return (
             <Container>
-                <HeaderContainer userFollow={false} number={ctx.userData?.following} text={'seguidores'}></HeaderContainer>
+                <HeaderContainer userFollow={false} number={ctx.userData?.following ? ctx.userData?.following : ' '} text={'Seguindo'}></HeaderContainer>
                 <FollowingContainer name={ctx.userData?.name} following={ctx?.followings}/> 
                 <Footer/>
             </Container>

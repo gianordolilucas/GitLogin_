@@ -29,11 +29,13 @@ const FollowersContainer = props => {
             const repos = await client.get(`/${user}/repos`);
             const followers = await client.get(`/${user}/followers`);
             const followings = await client.get(`${user}/following`)
+            const starreds = await client.get(`${user}/starred`)
 
             ctx.setUserDataFollow(response.data)            
             ctx.setReposFollow(repos.data)
             ctx.setFollowersFollow(followers.data)
             ctx.setFollowingsFollow(followings.data)
+            ctx.setStarredsFollow(starreds.data)
 
             handleOnclick('/FollowDetails')
            

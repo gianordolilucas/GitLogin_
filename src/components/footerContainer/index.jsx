@@ -6,7 +6,7 @@ import {
 } from './styles'
 
 
-import { FiUsers,FiGithub, FiHome } from 'react-icons/fi';
+import { FiUsers,FiGithub, FiHome, FiStar } from 'react-icons/fi';
 import {context} from '../../context'
 
 const FooterContainer = props => {
@@ -16,78 +16,29 @@ const FooterContainer = props => {
     const history = useHistory();
     const handleOnclick = route => history.push(route);
 
-    async function goHome(){
-            
+        
+    /* Limpa o contexto do usuario selecionado e vai para a url que o botão apontar */
+    async function goCleanUserDatails(url){
         try{
-
             ctx.setUserDataFollow();
             ctx.setReposFollow();
             ctx.setFollowersFollow();
             ctx.setFollowingsFollow();
-            handleOnclick('/')
+            handleOnclick(url)
            
         } catch(err){
             console.log(err)
         }
     }
 
-    async function goRepos(){
-            
-        try{
-
-            ctx.setUserDataFollow();
-            ctx.setReposFollow();
-            ctx.setFollowersFollow();
-            ctx.setFollowingsFollow();
-            handleOnclick('/repos')
-           
-        } catch(err){
-            console.log(err)
-        }
-    }
-
-    async function goFollowers(){
-            
-        try{
-
-            ctx.setUserDataFollow();
-            ctx.setReposFollow();
-            ctx.setFollowersFollow();
-            ctx.setFollowingsFollow();
-            handleOnclick('/followers')
-           
-        } catch(err){
-            console.log(err)
-        }
-    }
-
-    async function goFollowing(){
-            
-        try{
-
-            ctx.setUserDataFollow();
-            ctx.setReposFollow();
-            ctx.setFollowersFollow();
-            ctx.setFollowingsFollow();
-            handleOnclick('/following')
-           
-        } catch(err){
-            console.log(err)
-        }
-    }
-
-    
-
-    
-
-    
 
     return (
         <MenuContainer>
-            <ButtomMenu onClick={() => goHome()}><FiHome/>Home</ButtomMenu>
-            <ButtomMenu onClick={() => goRepos()}><FiGithub/>Repos</ButtomMenu>
-            <ButtomMenu onClick={() => goFollowers()}><FiUsers/>Seguidores</ButtomMenu>
-            <ButtomMenu onClick={() => goFollowing()}><FiUsers/>Seguindo</ButtomMenu>
+            <ButtomMenu onClick={() => goCleanUserDatails('/')}><FiHome/>Home</ButtomMenu>
+            <ButtomMenu onClick={() => goCleanUserDatails('/repos')}><FiGithub/>Repos</ButtomMenu>
+            <ButtomMenu onClick={() => goCleanUserDatails('/starred')}><FiStar/>Favoritos</ButtomMenu>
+            <ButtomMenu onClick={() => goCleanUserDatails('/followers')}><FiUsers/>Seguidores</ButtomMenu>
+            <ButtomMenu onClick={() => goCleanUserDatails('/following')}><FiUsers/>Seguindo</ButtomMenu>
         </MenuContainer>
         
 

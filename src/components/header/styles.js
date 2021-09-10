@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeaderSection = styled.header`
     width: 400px;
-    height: 400px;
+    height: 200px;
     background: rgba(0,0,0, .6);
     border-radius: 10px;
     display: flex;
@@ -21,12 +21,10 @@ export const HeaderTitle = styled.h1`
 `
 
 export const HeaderInputContainer = styled.div`
-    padding: 10px 16px;
+    padding: 8px 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    flex-flow:column wrap;
 `
 
 export const HeaderInput = styled.input`
@@ -38,6 +36,10 @@ export const HeaderInput = styled.input`
     color: #444;
     transition: .4s ease;
     
+    ::placeholder { 
+        color: red;
+        opacity: 1;
+    }
 
     &:focus {
         outline: none;
@@ -51,9 +53,10 @@ export const Span = styled.span`
     color: red;
     border-radius: 2px;
     border: 0;
-    margin: 0px 0px 0px;
-    font-size: 12px;
+    margin: 0px 0px ;
+    font-size: 15px;
     line-height: 15px;
+    text-align: center;
 
 `
 
@@ -75,19 +78,17 @@ export const LogoGit = styled.button`
 
 export const HeaderSearchButton = styled.button`
 
-    width: 200px;
+    width: 50px;
     height: 50px;
-    border-radius: 5px;
+    border-radius: 50px;
     border: none;
-    background: rgb(247 209 21);;
+    background: rgb(247 209 21);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #000;
     transition: ease .3s;
     margin: 15px 15px;
-    font-size: 20px;
-    font-weight: 700;
 
     &:hover {
         transform: scale(1.05);
