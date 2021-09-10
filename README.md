@@ -4,12 +4,18 @@
 
 Projeto de desenvolvimento web que utiliza tecnologias:
 
--React;\n
--Styled;\n
--Components;\n
--Axios;\n
--React-Router-DOM;\n
--React-Icons.\n
+-React;
+
+-Styled;
+
+-Components;
+
+-Axios;
+
+-React-Router-DOM;
+
+-React-Icons.
+
 
 O objetivo do projeto é validar o login utilizando a API do Gitub
 
@@ -25,21 +31,29 @@ O projeto esta orientado a componentes, para cada componente que julguei necess�
 
 
 Consulta:
+
 Foi criado com o Axios uma baseURL, que esta em 'services/client', para não precisarmos digitar em cada requisição o endereço do servidor, informando apenas a rota e seus parâmetros. A consulta é feita em dois momentos:
 -> Usuario principal: No header, ao buscar por um usuário;
 -> Detalhes de usuário: Ao selecionar um usuário da lista de followers ou following;
 
 
 Contexto:
+
 O nosso contexto fica na Pasta 'context', e é nele que se guarda todas as informações que a aplicação usa da API do gitOAuth, quando se precisa de qualquer informação que esta salva basta dar um import dentro do componente
 
 
 Rotas:
--> '/' : Home que irá exibir os detalhes do usuário buscado na Api e o campo para buscar um novo user;\n
--> '/repos' : Lista dos repositórios do usuário;\n
--> '/starred' : Lista dos Favoritos do usuáio;\n
--> '/followers' : Lista de outros usuários que seguem o usuário buscado;\n
--> '/following' : Lista de outros usuários que o o usuário buscado segue;\n
+
+-> '/' : Home que irá exibir os detalhes do usuário buscado na Api e o campo para buscar um novo user;
+
+-> '/repos' : Lista dos repositórios do usuário;
+
+-> '/starred' : Lista dos Favoritos do usuáio;
+
+-> '/followers' : Lista de outros usuários que seguem o usuário buscado;
+
+-> '/following' : Lista de outros usuários que o o usuário buscado segue; 
+
 -> '/UserDetails' : Quando selecionar um outro usuário dentro das listas de 'followers' ou 'following'  será exibido informações básicas daquele usuário, caso queira torna-lo o principal da aplicação basta clicar em 'salvar' que esta no lado superior direito
 
 
