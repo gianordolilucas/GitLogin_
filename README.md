@@ -4,12 +4,12 @@
 
 Projeto de desenvolvimento web que utiliza tecnologias:
 
--React;
--Styled;
--Components;
--Axios;
--React-Router-DOM;
--React-Icons.
+-React;\n
+-Styled;\n
+-Components;\n
+-Axios;\n
+-React-Router-DOM;\n
+-React-Icons.\n
 
 O objetivo do projeto é validar o login utilizando a API do Gitub
 
@@ -35,11 +35,11 @@ O nosso contexto fica na Pasta 'context', e é nele que se guarda todas as infor
 
 
 Rotas:
--> '/' : Home que irá exibir os detalhes do usuário buscado na Api e o campo para buscar um novo user;
--> '/repos' : Lista dos repositórios do usuário;
--> '/starred' : Lista dos Favoritos do usuáio;
--> '/followers' : Lista de outros usuários que seguem o usuário buscado;
--> '/following' : Lista de outros usuários que o o usuário buscado segue;
+-> '/' : Home que irá exibir os detalhes do usuário buscado na Api e o campo para buscar um novo user;\n
+-> '/repos' : Lista dos repositórios do usuário;\n
+-> '/starred' : Lista dos Favoritos do usuáio;\n
+-> '/followers' : Lista de outros usuários que seguem o usuário buscado;\n
+-> '/following' : Lista de outros usuários que o o usuário buscado segue;\n
 -> '/UserDetails' : Quando selecionar um outro usuário dentro das listas de 'followers' ou 'following'  será exibido informações básicas daquele usuário, caso queira torna-lo o principal da aplicação basta clicar em 'salvar' que esta no lado superior direito
 
 
