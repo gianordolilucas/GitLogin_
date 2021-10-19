@@ -1,50 +1,49 @@
 import React from 'react';
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
-import{
+import {
     Container,
     NumberContainer,
     NumberValue,
     NumberDatails,
     NumberContainerFollow
-}from './styles'
+} from './styles'
 
-const UserNumbers = props =>
-    {
-        const history = useHistory();
-        const handleOnclick = route => history.push(route);
+const UserNumbers = props => {
+    const history = useHistory();
+    const handleOnclick = route => history.push(route);
 
-        return(
-            <Container>
+    return (
+        <Container>
 
-                {props.userFollow  ?
-                    <React.Fragment>
-                        {/* Seguidores */ }
-                        <NumberContainerFollow >
-                            <NumberValue>{props.followers}</NumberValue>
-                            <NumberDatails>Seguidores</NumberDatails>
-                        </NumberContainerFollow>
-                        
-                        {/* Seguindo */}
-                        <NumberContainerFollow >
-                            <NumberValue>{props.following}</NumberValue>
-                            <NumberDatails>Seguindo</NumberDatails>
-                        </NumberContainerFollow>
+            {props.userFollow ?
+                <React.Fragment>
+                    {/* Seguidores */}
+                    <NumberContainerFollow >
+                        <NumberValue>{props.followers}</NumberValue>
+                        <NumberDatails>Seguidores</NumberDatails>
+                    </NumberContainerFollow>
 
-                        {/* Repositorios */}
-                        <NumberContainerFollow >
-                            <NumberValue>{props.repos}</NumberValue>
-                            <NumberDatails>Repositorios</NumberDatails>
-                        </NumberContainerFollow>
-                    </React.Fragment>
-                : 
-                    <React.Fragment>
-                    {/* Seguidores */ }
-                    <NumberContainer  onClick={() => handleOnclick('/followers')}>
+                    {/* Seguindo */}
+                    <NumberContainerFollow >
+                        <NumberValue>{props.following}</NumberValue>
+                        <NumberDatails>Seguindo</NumberDatails>
+                    </NumberContainerFollow>
+
+                    {/* Repositorios */}
+                    <NumberContainerFollow >
+                        <NumberValue>{props.repos}</NumberValue>
+                        <NumberDatails>Repositorios</NumberDatails>
+                    </NumberContainerFollow>
+                </React.Fragment>
+                :
+                <React.Fragment>
+                    {/* Seguidores */}
+                    <NumberContainer onClick={() => handleOnclick('/followers')}>
                         <NumberValue>{props.followers}</NumberValue>
                         <NumberDatails>Seguidores</NumberDatails>
                     </NumberContainer>
-                    
+
                     {/* Seguindo */}
                     <NumberContainer onClick={() => handleOnclick('/following')}>
                         <NumberValue>{props.following}</NumberValue>
@@ -57,9 +56,9 @@ const UserNumbers = props =>
                         <NumberDatails>Repositorios</NumberDatails>
                     </NumberContainer>
                 </React.Fragment>
-                }
-            </Container>
-        )
-    }
+            }
+        </Container>
+    )
+}
 
 export default UserNumbers

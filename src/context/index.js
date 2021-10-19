@@ -1,22 +1,22 @@
-import React, {useState, createContext} from 'react'
+import React, { useState, createContext } from 'react'
 
 export const context = createContext();
 
 
 export const ContextProvider = props => {
-    const [userData, setUserData ] = useState({});
+    const [userData, setUserData] = useState({});
     const [repos, setRepos] = useState({});
-    const [followers, setFollowers ] = useState({});
+    const [followers, setFollowers] = useState({});
     const [followings, setFollowings] = useState({});
     const [starreds, setStarreds] = useState({});
 
     //Usuario selecionado
-    const [userDataFollow, setUserDataFollow ] = useState({});
+    const [userDataFollow, setUserDataFollow] = useState({});
     const [reposFollow, setReposFollow] = useState({});
-    const [followersFollow, setFollowersFollow ] = useState({});
+    const [followersFollow, setFollowersFollow] = useState({});
     const [followingsFollow, setFollowingsFollow] = useState({});
     const [starredsFollow, setStarredsFollow] = useState({});
-    
+
     return (
         <context.Provider value={{
             userData,
@@ -31,11 +31,11 @@ export const ContextProvider = props => {
             followingsFollow,
             starredsFollow,
 
-            
+
             setUserData,
             setRepos,
             setFollowers,
-            setFollowings, 
+            setFollowings,
             setStarreds,
 
             setUserDataFollow,

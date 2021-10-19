@@ -5,7 +5,7 @@ const App = () => (
     <ContextProvider>
         <Routes />
     </ContextProvider>
-    
+
 );
 
 export default App;

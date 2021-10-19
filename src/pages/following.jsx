@@ -12,11 +12,11 @@ const Following = props => {
     const ctx = useContext(context);
 
     return (
-            <Container>
-                <HeaderContainer userFollow={false} number={ctx.userData?.following ? ctx.userData?.following : ' '} text={'Seguindo'}></HeaderContainer>
-                <FollowingContainer name={ctx.userData?.name} following={ctx?.followings}/> 
-                <Footer/>
-            </Container>
+        <Container>
+            <HeaderContainer userFollow={false} number={ctx.userData?.following ? ctx.userData?.following : ' '} text={'Seguindo'}></HeaderContainer>
+            <FollowingContainer name={ctx.userData?.name} following={ctx?.followings} />
+            <Footer />
+        </Container>
     );
 
 }; export default Following

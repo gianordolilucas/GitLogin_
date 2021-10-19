@@ -14,8 +14,8 @@ const Repos = props => {
     return (
         <Container>
             <HeaderContainer userFollow={false} number={ctx.userData?.public_repos} text={'repositórios'}></HeaderContainer>
-            <ReposContainer name={ctx.userData?.name} repos={ctx?.repos}/>
-            <Footer/>
+            <ReposContainer name={ctx.userData?.name} repos={ctx?.repos} />
+            <Footer />
         </Container>
     );
 

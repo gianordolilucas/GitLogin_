@@ -12,7 +12,7 @@ const ReposContainer = props => {
         <Section>
             <Title>{(props.name)?.split(' ')[0]}</Title>
             <ListOfReposContainer>
-                {(props?.repos).map( repo => (
+                {(props?.repos).map(repo => (
                     <Repo key={repo?.id}>
                         <RepoName>{repo?.name}</RepoName>
                         <RepoDescription>{repo?.description}</RepoDescription>

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 
-export const  Container = styled.div`
+export const Container = styled.div`
     background: #222;
     width: 100%;
     heigth: 80px;
@@ -11,7 +11,7 @@ export const  Container = styled.div`
     justify-content: space-between;
 
 `
-export const  NumberContainer = styled.div`
+export const NumberContainer = styled.div`
     width: 100px;
     heigth: 50px;
     padding: 10px;
@@ -28,7 +28,7 @@ export const  NumberContainer = styled.div`
     }
 
 `
-export const  NumberContainerFollow = styled.div`
+export const NumberContainerFollow = styled.div`
     width: 100px;
     heigth: 50px;
     display: flex;
@@ -37,13 +37,13 @@ export const  NumberContainerFollow = styled.div`
     flex-direction: column;
 `
 
-export const  NumberValue = styled.h1`
+export const NumberValue = styled.h1`
     font-size:30px;
     text-align: center;
     color: #FFF
 
 `
-export const  NumberDatails = styled.h2`
+export const NumberDatails = styled.h2`
     font-size:12px;
     text-align: center;
     color: #777;

@@ -14,8 +14,8 @@ const Starred = props => {
     return (
         <Container>
             <HeaderContainer userFollow={false} number={' '} text={'Favoritos'}></HeaderContainer>
-            <StarredContainer name={ctx.userData?.name} starreds={ctx?.starreds}/>
-            <Footer/>
+            <StarredContainer name={ctx.userData?.name} starreds={ctx?.starreds} />
+            <Footer />
         </Container>
     );
 

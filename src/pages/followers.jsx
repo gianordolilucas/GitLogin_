@@ -14,9 +14,9 @@ const Followers = props => {
 
     return (
         <Container>
-            <HeaderContainer userFollow={false} number={ctx.userData?.followers ? ctx.userData?.followers : ' ' } text={'Seguidores'}></HeaderContainer>
-            <FollowersContainer name={ctx.userData?.name} followers={ctx?.followers}/>
-            <Footer/>
+            <HeaderContainer userFollow={false} number={ctx.userData?.followers ? ctx.userData?.followers : ' '} text={'Seguidores'}></HeaderContainer>
+            <FollowersContainer name={ctx.userData?.name} followers={ctx?.followers} />
+            <Footer />
         </Container>
 
     );
